@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  div Order Id: #{orderId}
+  div Total Amount: #{amount}
+  form(action="/createOrder/#{orderId}", method="post")
+    button(type='submit') Checkout
